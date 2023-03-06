@@ -1,0 +1,120 @@
+La documentation de l'API SIV - Système d'immatriculation des véhicules en France fournit un accès en ligne pratique pour obtenir des informations détaillées sur les véhicules immatriculés dans le pays. En entrant simplement la plaque d'immatriculation du véhicule, l'API de plaque d'immatriculation peut fournir des informations telles que la marque, le modèle, la couleur, le poids, la puissance, les émissions de CO2, le type de carburant et la date de mise en circulation.
+
+Ces informations peuvent être utiles pour de nombreuses raisons, comme la vérification des caractéristiques d'un véhicule avant l'achat ou la location, ou pour obtenir des informations sur un véhicule impliqué dans un accident. Il est important de souligner que l'API de plaque d'immatriculation ne permet pas d'obtenir des informations personnelles sur les propriétaires de véhicules et ne peut être utilisée à des fins illégales.
+
+En résumé, l'API de plaque d'immatriculation en France est un outil pratique et légitime pour les utilisateurs qui souhaitent obtenir des informations techniques sur les véhicules immatriculés dans le pays.
+
+Avec apiplaqueimmatriculation.com Récupérer les informations des véhicules simplement avec notre API PLAQUE IMMATRICULATION rapide flexible .
+
+Code javascript 
+
+
+
+
+
+// Code javascript 
+
+var token="TokenDemo";
+var immatriculation="AA-123-ZE";
+
+var host_name="apiplaqueimmatriculation.com";
+
+var format="json";
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "http://api.apiplaqueimmatriculation.com/carte-grise?host_name="+host_name+"&immatriculation="+immatriculation+"&token="+token+"&format="+format,
+        "method": "POST",
+        "headers": {
+            "Accept": "application/json"
+        }
+    }
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+    });
+
+
+
+Energies  de voiture
+
+1 – Essence (ES) / Diesel (GO)
+
+2 – GPL (GP) / GNV (GN)
+
+3 – Electricité (EL)
+
+4 – Hybride (EE, GL, OL, PE, NE, FL)
+
+5 – Superéthanol E85 (FE)
+
+6 – Bicarburation (EG, EN, FG, FN)
+
+ 
+
+Genres  de voirure
+
+ 1 – Voiture (VP)
+
+2 – Véhicule société / utilitaire (CTTE / Deriv-VP)
+
+ 4 – Véhicule spécialisé (VASP)
+
+5 – Motocyclette (MTL, MTT1, MTT2, MTTE, MOTO)
+
+6 – Vélomoteur et Cyclomoteur <= 50cm3 (CL)
+
+ 7 – Quadricycles à moteur: quad, voiturette (QM)
+
+8 – Engin agricole (TRA, Quad, MAGA)
+
+10 – Tricycles à moteur (TM)
+
+11 – Cyclomoteur carrossé à 3 roues (voiturette) (CYCL)
+
+12 – Camion (CAM) > 3,5t
+
+13 – Bus(TCP) > 3,5t
+
+14 – Tracteur Routier (TRR) > 3,5t
+
+15 – Remorque (REM) ou semi-remorque (SREM)
+
+16 – Caravane (RESP)
+
+Exemple  résultat d’api  :
+
+{"data":
+
+    {
+    "erreur":"",
+    "immat":"aa-123-ze"
+    ,"co2":"119",
+    "energie":1,
+    "energieNGC":"ESSENCE",
+    "genreVCG":1,
+    "genreVCGNGC":"VP",
+    "puisFisc":"4",
+    "carrosserieCG":"CI",
+    "marque":"FIAT",
+    "modele":"PANDA",
+    "date1erCir_us":"2009-06-02",
+    "date1erCir_fr":"02-06-2009",
+    "collection":"non",
+    "date30":"1989-06-30",
+    "vin":"ZFA16900001426851",
+    "boite_vitesse":"M",
+    "puisFiscReel":"60",
+    "nb_portes":4,
+    "type_mine":"MFT1022E4419",
+    "couleur":"JAUNE CLAIR",
+    "poids":"860 kg",
+    "cylindres":4,
+    "nr_passagers":4,
+    "sra_id":"FI04139",
+    "sra_group":"27",
+    "sra_commercial":"ALESSI 1.2 8V",
+    "logo_marque":"https://api.apiplaqueimmatriculation.com/logos_marques/fiat.png"
+    }
+}
+
+Source  :http://apiplaqueimmatriculation.com
